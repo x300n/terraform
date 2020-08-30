@@ -71,7 +71,7 @@ resource "aws_security_group" "default" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  # HTTP access from the VPC
+# HTTP access from the VPC
   ingress {
     from_port   = 80
     to_port     = 80
@@ -122,8 +122,8 @@ resource "aws_instance" "web" {
 
   instance_type = "t2.micro"
 
-  # Lookup the correct AMI based on the region
-  # we specified
+# Lookup the correct AMI based on the region
+# we specified
   ami = var.aws_amis[var.aws_region]
 
   # The name of our SSH keypair we created above.
