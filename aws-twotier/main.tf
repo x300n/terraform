@@ -19,6 +19,8 @@ resource "aws_internet_gateway" "default" {
   vpc_id = aws_vpc.default.id
 }
 
+
+
 # Grant the VPC internet access on its main route table
 resource "aws_route" "internet_access" {
   route_table_id         = aws_vpc.default.main_route_table_id
@@ -71,6 +73,7 @@ resource "aws_security_group" "default" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  
 # HTTP access from the VPC
   ingress {
     from_port   = 80
