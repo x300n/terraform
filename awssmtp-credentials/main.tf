@@ -2,6 +2,7 @@ resource "aws_iam_user" "smtp_user" {
   name = "smtp_user"
 }
 
+
 resource "aws_iam_access_key" "smtp_user" {
   user = aws_iam_user.smtp_user.name
 }
@@ -27,6 +28,7 @@ resource "aws_iam_user_policy_attachment" "test-attach" {
 output "smtp_username" {
   value = aws_iam_access_key.smtp_user.id
 }
+
 
 output "smtp_password" {
   value = aws_iam_access_key.smtp_user.ses_smtp_password_v4
