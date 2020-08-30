@@ -7,9 +7,11 @@ Example: ~/.ssh/terraform.pub
 DESCRIPTION
 }
 
+
 variable "key_name" {
   description = "Desired name of AWS key pair"
 }
+
 
 variable "aws_region" {
   description = "AWS region to launch servers."
@@ -22,6 +24,7 @@ variable "aws_amis" {
     eu-west-1 = "ami-674cbc1e"
   }
 }
+
 
 variable "private_key_path" {
   description = "Path to the private key - for ssh login."
