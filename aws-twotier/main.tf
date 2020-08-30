@@ -137,6 +137,7 @@ resource "aws_instance" "web" {
   # backend instances.
   subnet_id = aws_subnet.default.id
 
+  
   # We run a remote provisioner on the instance after creating it
   # In this case, we just install nginx and start it. By default
   # this should be on port 80
